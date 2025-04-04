@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
+<header>
+  <h1>Bem vindo ao meu formulário</h1>
+    
+</header>
 <body>
     <div class="container">
     <form action="processa.php" method="POST">
   <!-- Email input -->
+   <h2 class="sub">Responda a esse formulário para prosseguir</h2>
   <div data-mdb-input-init class="form-outline mb-4">
     <input type="email" id="form1Example1" class="form-control" name="email" />
     <label class="form-label" for="form1Example1">Email address</label>
