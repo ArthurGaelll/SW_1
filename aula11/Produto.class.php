@@ -5,7 +5,7 @@ class Produto{
     private $Quantidade;
 
 
-    public function __construct($nome , $preco=0 , $quantidade=0){
+    public function __construct($nome , $preco=0, $quantidade=0){
         $this->Nome = $nome;
         $this->Preco = $preco;
         $this->Quantidade = $quantidade;
@@ -32,22 +32,23 @@ public function adicionarEstoque($adicionar){
         $this->Quantidade += $adicionar;
 
     } else{
-        echo "Não tem como você reduzir seu estoque aqui!";
+        echo"O valor tem que ser maior que 0.<br>";
     }
  }
-public function removerEstoque($retirar){
-    if($retirar < 0) {
-        $this->Quantidade -= $retirar;
+public function removerEstoque($adicionar){
+    if($adicionar>0 && $adicionar <= $this->Quantidade) {
+        $this->Quantidade -= $adicionar;
 
     } else{
-        echo "Não tem como você adicionar seu estoque aqui!";
+        echo "Invalido!<br>";
     }
 
 }
 
 public function mostrarDetalhes(){
-    echo "Nome: ". $this->Nome . "<br>";
-    echo "Preço: ". $this->Preco . "<br>"; 
+    echo"Nome: {$this->Nome} <br>";
+    echo"Preço: {$this->Preco} <br>";
+    echo"Quantidade: {$this->Quantidade}"; 
 
 }
 }
